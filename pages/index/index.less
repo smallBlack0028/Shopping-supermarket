@@ -1,0 +1,53 @@
+.index_swiper {
+  swiper {
+    width: 750rpx;
+    height: 340rpx;
+    image {
+      width: 100%;
+    }
+  }
+}
+.index_cate {
+  display: flex;
+  navigator {
+    flex: 1;
+    padding: 20rpx;
+    image {
+      width: 100%;
+    }
+  }
+}
+.index_floor {
+  .floor_group {
+    .floor_title {
+      padding: 10rpx 0;
+      image: 100%;
+    }
+    .floor_list {
+      // 清除浮动
+      overflow: hidden;
+      navigator {
+        float: left;
+        width: 33.33%;
+        // 后四个navigator，-n+几表示后几个元素
+        &:nth-last-child(-n+4) {
+          // 原图宽高：232 * 386
+          // 232 / 386 = 33.33vw / height
+          // 第一张图片高度：height: 33.33vw * 386 / 232
+          // 后四个图片的高度是第一个图片高度的 1/2
+          height: 33.33vw * 386 / 232 / 2;
+          border-left: 10rpx solid #fff;
+        }
+        // 第2个和第3个图片
+        &:nth-child(2),
+        &:nth-child(3) {
+          border-bottom: 10rpx solid #fff;
+        }
+        image {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}

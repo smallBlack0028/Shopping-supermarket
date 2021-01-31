@@ -1,0 +1,7 @@
+<view class="search_input">
+  <!-- 使用navigator标签来进行跳转页面
+  需要给标签加上url和open-type属性-->
+  <navigator url="/pages/search/search" open-type="navigate">
+    搜索
+  </navigator>
+</view>
